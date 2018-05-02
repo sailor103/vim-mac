@@ -52,7 +52,7 @@ Plugin 'honza/vim-snippets'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-" Plugin 'Valloric/YouCompleteMe'
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'NLKNguyen/papercolor-theme'
 Plugin 'chemzqm/wxapp.vim'
@@ -90,7 +90,7 @@ let mapleader = ","
 set history=2000
 
 "设置剪贴板 
-" set clipboard=unnamed
+set clipboard=unnamed
 
 "检测文件类型
 filetype on
@@ -553,7 +553,7 @@ set t_Co=256
 if has('gui_win32')
   set guifont=Iosevka\ Term:h14:cANSI
 else
-  set guifont=Iosevka\ Nerd\ Font:h15
+  set guifont=Iosevka\ Nerd\ Font:h16
 endif
 "By YQC
 "Tab next
