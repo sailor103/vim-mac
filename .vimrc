@@ -22,11 +22,13 @@ Plugin 'mileszs/ack.vim'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
+" Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'Valloric/MatchTagAlways'
 "Plugin 'drmingdrmer/xptemplate'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
+Plugin 'vim-scripts/vis'
 Plugin 'hail2u/vim-css3-syntax'
 Plugin 'Raimondi/delimitMate'
 Plugin 'pangloss/vim-javascript'
@@ -42,6 +44,8 @@ Plugin 'wavded/vim-stylus'
 Plugin 'groenewege/vim-less'
 " Plugin 'posva/vim-vue'
 " Plugin 'darthmall/vim-vue'
+Plugin 'mxw/vim-jsx'
+Plugin 'elzr/vim-json'
 Plugin 'iamcco/markdown-preview.vim'
 " Plugin 'sailor103/image.vim'
 " Plugin 'ap/vim-css-color'
@@ -513,6 +517,10 @@ let g:ycm_key_list_previous_completion = ['<Up>']
 " vim-devicons
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols = {} " needed
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['vue'] = ''
+let g:WebDevIconsNerdTreeAfterGlyphPadding = '  '
+
+" vim json
+set conceallevel=0
 
 " let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 
@@ -553,7 +561,7 @@ set t_Co=256
 if has('gui_win32')
   set guifont=Iosevka\ Term:h14:cANSI
 else
-  set guifont=Iosevka\ Nerd\ Font:h16
+  set guifont=Iosevka\ Nerd\ Font:h18
 endif
 "By YQC
 "Tab next
