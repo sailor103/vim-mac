@@ -19,34 +19,35 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'mattn/emmet-vim'
 Plugin 'mileszs/ack.vim'
-Plugin 'plasticboy/vim-markdown'
+" Plugin 'plasticboy/vim-markdown'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 " Plugin 'jistr/vim-nerdtree-tabs'
-Plugin 'Valloric/MatchTagAlways'
+" Plugin 'Valloric/MatchTagAlways'
 "Plugin 'drmingdrmer/xptemplate'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-scripts/vis'
-Plugin 'hail2u/vim-css3-syntax'
+" Plugin 'hail2u/vim-css3-syntax'
 Plugin 'Raimondi/delimitMate'
-Plugin 'pangloss/vim-javascript'
+" Plugin 'pangloss/vim-javascript'
 Plugin 'heavenshell/vim-jsdoc'
-Plugin 'othree/html5.vim'
-Plugin 'Yggdroot/indentLine'
+" Plugin 'othree/html5.vim'
+" Plugin 'Yggdroot/indentLine'
+Plugin 'nathanaelkane/vim-indent-guides'
 "Plugin 'junegunn/vim-easy-align'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'sailor103/vim-dict'
 Plugin 'kshenoy/vim-signature'
-Plugin 'digitaltoad/vim-pug'
-Plugin 'wavded/vim-stylus'
-Plugin 'groenewege/vim-less'
+" Plugin 'digitaltoad/vim-pug'
+" Plugin 'wavded/vim-stylus'
+" Plugin 'groenewege/vim-less'
 " Plugin 'posva/vim-vue'
 " Plugin 'darthmall/vim-vue'
-Plugin 'mxw/vim-jsx'
-Plugin 'elzr/vim-json'
-Plugin 'iamcco/markdown-preview.vim'
+" Plugin 'mxw/vim-jsx'
+" Plugin 'elzr/vim-json'
+" Plugin 'iamcco/markdown-preview.vim'
 " Plugin 'sailor103/image.vim'
 " Plugin 'ap/vim-css-color'
 Plugin 'tpope/vim-commentary'
@@ -57,8 +58,9 @@ Plugin 'easymotion/vim-easymotion'
 Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'Valloric/YouCompleteMe'
-Plugin 'ryanoasis/vim-devicons'
+" Plugin 'ryanoasis/vim-devicons'
 Plugin 'NLKNguyen/papercolor-theme'
+Plugin 'sheerun/vim-polyglot'
 Plugin 'chemzqm/wxapp.vim'
 " Plugin 'ternjs/tern_for_vim'
 
@@ -219,7 +221,7 @@ set foldenable
 " diff      对没有更改的文本进行折叠
 " marker    使用标记进行折叠, 默认标记是 {{{ 和 }}}
 set foldmethod=indent
-set foldlevel=99
+set foldlevel=15
 
 " 缩进配置
 
@@ -462,9 +464,14 @@ nmap <silent> <leader>sv :so $MYVIMRC<CR>
 "==========================================
 
 " au! BufNewFile,BufRead *.vue setf javascript
-nnoremap <leader>pg :set ft=pug<CR>
-nnoremap <leader>st :set ft=stylus<CR>
-nnoremap <leader>js :set ft=javascript<CR>
+" nnoremap <leader>pg :set ft=pug<CR>
+" nnoremap <leader>st :set ft=stylus<CR>
+" nnoremap <leader>js :set ft=javascript<CR>
+
+"==========================================
+" JSX 注释
+"==========================================
+autocmd FileType javascript.jsx setlocal commentstring={/*\ %s\ */}
 
 "==========================================
 " 插件设置
@@ -474,10 +481,12 @@ nnoremap <leader>js :set ft=javascript<CR>
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'powerlineish'
 " vim-javascript
-let javascript_enable_domhtmlcss = 1
+" let javascript_enable_domhtmlcss = 1
 " indentLine
-let g:indentLine_enabled = 1
-let g:indentLine_char = '┆'
+" let g:indentLine_enabled = 1
+" let g:indentLine_char = '┆'
+" let g:indentLine_faster = 1
+" let g:indentLine_indentLevel = 9
 " EasyAlign
 " vmap <Leader>a <Plug>(EasyAlign)
 " nmap <Leader>a <Plug>(EasyAlign)
@@ -505,9 +514,9 @@ let g:ctrlp_follow_symlinks=1
 " vim-commentary
 autocmd FileType python,shell,coffee set commentstring=#\ %s
 " vim-markdonw
-let g:vim_markdown_conceal = 0
+" let g:vim_markdown_conceal = 0
 " vim-markdown-preview
-let g:mkdp_path_to_chrome = "google-chrome"
+" let g:mkdp_path_to_chrome = "google-chrome"
 
 " YouCompleteMe
 "youcompleteme  默认tab  s-tab 和 ultisnips 冲突
@@ -515,12 +524,9 @@ let g:ycm_key_list_select_completion = ['<Down>']
 let g:ycm_key_list_previous_completion = ['<Up>']
 
 " vim-devicons
-let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols = {} " needed
-let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['vue'] = ''
-let g:WebDevIconsNerdTreeAfterGlyphPadding = '  '
-
-" vim json
-set conceallevel=0
+" let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols = {} " needed
+" let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['vue'] = ''
+" let g:WebDevIconsNerdTreeAfterGlyphPadding = '  '
 
 " let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 
